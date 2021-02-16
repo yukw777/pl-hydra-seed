@@ -1,2 +1,1 @@
-# pl-hydra-seed
-PyTorch Lightning + Hydra seed
+# PyTorch Lightning + Hydra seed
