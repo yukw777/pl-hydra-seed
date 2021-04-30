@@ -4,3 +4,4 @@ mypy
 black
 ipython
 line_profiler
+coverage

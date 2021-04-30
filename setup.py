@@ -6,6 +6,7 @@ def requirements():
         return f.read().splitlines()
 
 
+# TODO: change name
 setup(
     name="project",
     version="0.1.0",
