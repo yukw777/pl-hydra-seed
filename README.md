@@ -29,6 +29,7 @@ git clone https://github.com/yukw777/pl-hydra-seed
 
 # install project
 cd pl-hydra-seed
+python install_cuda_deps.py
 python -m pip install -e .
 ```
 Next, run the training module.
