@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04]
-        python-version: [3.7, 3.8]
+        python-version: [3.7, 3.8, 3.9]
 
     # Timeout: https://stackoverflow.com/a/59076067/4521646
     timeout-minutes: 35
@@ -48,11 +48,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install --requirement requirements.txt --upgrade --quiet
-        pip install --requirement requirements-dev.txt --upgrade --quiet
         python --version
-        pip --version
-        pip list
+        python -m pip --version
+        python -m pip list
+        python -m pip install packaging
+        python install_cuda_deps.py
+        python -m pip install .
+        python -m pip install --requirement requirements-dev.txt --upgrade --quiet
       shell: bash
 
     - name: Lint with flake8
