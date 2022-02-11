@@ -29,7 +29,7 @@ git clone https://github.com/yukw777/pl-hydra-seed
 
 # install project
 cd pl-hydra-seed
-pip install -e .
+python -m pip install -e .
 ```
 Next, run the training module.
 ```bash
